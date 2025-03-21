@@ -132,6 +132,9 @@ body.dark-theme {
   width: 100%;
   display: flex;
   align-items: center;
+  border-radius: 100%; /* Makes the logo round */
+  overflow: hidden; /* Ensures content stays within the round shape */
+
 }
 
 .sidebar .logo-details i {
