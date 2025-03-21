@@ -355,6 +355,9 @@ body.dark-theme {
   opacity: 0; /* Initially hidden */
   transform: translateY(10px); /* Slightly shifted down */
   animation: fadeInUp 0.6s ease-in-out forwards; /* Animation effect */
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
 }
 
 @keyframes fadeInUp {
@@ -387,6 +390,10 @@ body.dark-theme {
 
 .sidebar .profile-details .job {
   font-size: 12px;
+  animation: fadeInOut 1s ease forwards;
+  position: absolute; /* Change to absolute positioning */
+  right: 55%; /* Adjust this value to set the desired distance from the left */
+  bottom: 30%; 
 }
 
 /* Home Section Styles */
