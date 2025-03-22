@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Angler - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+    <script src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+  </head>
+  <body class="light-theme">
+    <div class="sidebar close">
+      <div class="logo-details">
+        <img src="logo.png" alt="Logo" style="width: 75px; height: 55px;">
+        <span class="logo_name">Angler</span>
+      </div>    
+      <ul class="nav-links">
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class='bx bx-grid-alt'></i>
+              <span class="link_name">Home</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Today's Plan</a></li>
+          </ul>
+        </li>
+      
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class='bx bx-search'></i>
+              <span class="link_name">Search</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Topics</a></li>
+            <li><a href="#">Notes</a></li>
+            <li><a href="#">Roadmaps</a></li>
+          </ul>
+        </li>
+      
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class='bx bx-brain'></i>
+              <span class="link_name">Learn</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a href="#">Quizzes</a></li>
+            <li><a href="#">Revision</a></li>
+            <li><a href="#">Challenges</a></li>
+          </ul>
+        </li>
+      
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class='bx bx-bar-chart-alt'></i>
+              <span class="link_name">Progress</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a href="#">Streaks</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Badges</a></li>
+          </ul>
+        </li>
+      
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class='bx bx-group'></i>
+              <span class="link_name">Collaborate</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a href="#">Groups</a></li>
+            <li><a href="#">Discussions</a></li>
+            <li><a href="#">Leaderboard</a></li>
+          </ul>
+        </li>
+      
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class='bx bx-cog'></i>
+              <span class="link_name">Settings</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Subscription</a></li>
+            <li><a href="#">Assistant</a></li>
+          </ul>
+        </li>
+      
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class='bx bx-help-circle'></i>
+              <span class="link_name">Help</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Feedback</a></li>
+          </ul>
+        </li>
+      </ul>  
+
+      <li>
+        <div class="profile-details">
+          <div class="profile-content">
+            <img src="profile.jpg" alt="profileImg">
+          </div>
+          <div class="name-job">
+            <div class="profile_name">Ashok</div>
+            <div class="job">Person</div>
+          </div>
+          <i class='bx bx-log-out' ></i>
+        </div>
+      </li>
+    </div>
+    
+    <section class="home-section">
+      <div class="home-content">
+        <i class='bx bx-menu'></i>
+        <button id="theme-toggle" class="theme-toggle">
+          <span class="toggle-icon">🌙</span>
+        </button>
+        <h1 class="page-title">Home</h1>
+      </div>
+      
+      <!-- Welcome Banner -->
+      <div class="welcome-banner">
+        <div class="welcome-content">
+          <h2>Welcome back, Ashok!</h2>
+          <p>You've completed <strong>72%</strong> of your weekly goal. Keep it up!</p>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 72%"></div>
+          </div>
+        </div>
+        <div class="streak-counter">
+          <i class='bx bxs-flame'></i>
+          <span>14</span>
+          <p>Day Streak</p>
+        </div>
+      </div>
+      
+      <!-- Overview Section -->
+      <div id="overview" class="section">
+        <h2 class="section-title">Overview</h2>
+        
+        <div class="overview-grid">
+          <!-- Recently Watched -->
+          <div class="overview-card">
+            <div class="card-header">
+              <h3><i class='bx bx-play-circle'></i> Recently Watched</h3>
+              <a href="#" class="view-all">View All</a>
+            </div>
+            <div class="video-list">
+              <div class="video-item">
+                <div class="video-thumbnail">
+                  <img src="/api/placeholder/120/68" alt="Video thumbnail">
+                  <span class="video-duration">12:34</span>
+                </div>
+                <div class="video-info">
+                  <h4>Advanced Neural Networks</h4>
+                  <p>Watched 2 hours ago</p>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 75%"></div>
+                  </div>
+                </div>
+                <button class="resume-btn"><i class='bx bx-play'></i></button>
+              </div>
+              
+              <div class="video-item">
+                <div class="video-thumbnail">
+                  <img src="/api/placeholder/120/68" alt="Video thumbnail">
+                  <span class="video-duration">08:45</span>
+                </div>
+                <div class="video-info">
+                  <h4>Data Visualization Basics</h4>
+                  <p>Watched yesterday</p>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%"></div>
+                  </div>
+                </div>
+                <button class="resume-btn"><i class='bx bx-play'></i></button>
+              </div>
+              
+              <div class="video-item">
+                <div class="video-thumbnail">
+                  <img src="/api/placeholder/120/68" alt="Video thumbnail">
+                  <span class="video-duration">15:20</span>
+                </div>
+                <div class="video-info">
+                  <h4>Introduction to Machine Learning</h4>
+                  <p>Watched 3 days ago</p>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 40%"></div>
+                  </div>
+                </div>
+                <button class="resume-btn"><i class='bx bx-play'></i></button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Favorite Topics -->
+          <div class="overview-card">
+            <div class="card-header">
+              <h3><i class='bx bx-bookmark'></i> Favorite Topics</h3>
+              <a href="#" class="view-all">View All</a>
+            </div>
+            <div class="topics-list">
+              <div class="topic-item">
+                <i class='bx bx-brain'></i>
+                <div class="topic-info">
+                  <h4>Neural Networks</h4>
+                  <p>8 videos • 4 quizzes</p>
+                </div>
+                <span class="completion">75%</span>
+              </div>
+              
+              <div class="topic-item">
+                <i class='bx bx-bar-chart'></i>
+                <div class="topic-info">
+                  <h4>Data Visualization</h4>
+                  <p>12 videos • 6 quizzes</p>
+                </div>
+                <span class="completion">90%</span>
+              </div>
+              
+              <div class="topic-item">
+                <i class='bx bx-code-block'></i>
+                <div class="topic-info">
+                  <h4>Python Fundamentals</h4>
+                  <p>15 videos • 8 quizzes</p>
+                </div>
+                <span class="completion">100%</span>
+              </div>
+              
+              <div class="topic-item">
+                <i class='bx bx-data'></i>
+                <div class="topic-info">
+                  <h4>SQL Databases</h4>
+                  <p>10 videos • 5 quizzes</p>
+                </div>
+                <span class="completion">60%</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Learning Stats -->
+          <div class="overview-card stats-card">
+            <div class="card-header">
+              <h3><i class='bx bx-line-chart'></i> Learning Stats</h3>
+              <div class="time-filter">
+                <button class="time-btn active">Week</button>
+                <button class="time-btn">Month</button>
+                <button class="time-btn">Year</button>
+              </div>
+            </div>
+            <div id="learningStatsChart" class="stats-chart"></div>
+          </div>
+          
+          <!-- Next Best Action -->
+          <div class="overview-card action-card">
+            <div class="card-header">
+              <h3><i class='bx bx-bulb'></i> Next Best Action</h3>
+            </div>
+            <div class="action-content">
+              <div class="action-item">
+                <div class="action-icon">
+                  <i class='bx bx-revision'></i>
+                </div>
+                <div class="action-info">
+                  <h4>Review Neural Network Basics</h4>
+                  <p>Your quiz scores show you might need to refresh concepts</p>
+                  <button class="action-btn">Start Now</button>
+                </div>
+              </div>
+              
+              <div class="action-item">
+                <div class="action-icon">
+                  <i class='bx bx-book-open'></i>
+                </div>
+                <div class="action-info">
+                  <h4>Continue Machine Learning Course</h4>
+                  <p>You're 60% through - only 4 videos left!</p>
+                  <button class="action-btn">Continue</button>
+                </div>
+              </div>
+              
+              <div class="action-item">
+                <div class="action-icon">
+                  <i class='bx bx-test-tube'></i>
+                </div>
+                <div class="action-info">
+                  <h4>Take Practice Quiz</h4>
+                  <p>Test your knowledge on Data Visualization</p>
+                  <button class="action-btn">Start Quiz</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Today's Plan Section -->
+      <div id="todays-plan" class="section">
+        <h2 class="section-title">Today's Plan</h2>
+        
+        <div class="plan-grid">
+          <!-- Daily Schedule -->
+          <div class="plan-card schedule-card">
+            <div class="card-header">
+              <h3><i class='bx bx-calendar'></i> Daily Study Schedule</h3>
+              <div class="date-navigation">
+                <button class="date-nav-btn"><i class='bx bx-chevron-left'></i></button>
+                <span class="current-date">March 22, 2025</span>
+                <button class="date-nav-btn"><i class='bx bx-chevron-right'></i></button>
+              </div>
+            </div>
+            
+            <div class="schedule-timeline">
+              <div class="timeline-item completed">
+                <div class="timeline-time">9:00 AM</div>
+                <div class="timeline-content">
+                  <h4>Neural Networks Review</h4>
+                  <p>Chapters 3-4 • 45 min</p>
+                  <span class="status"><i class='bx bx-check'></i> Completed</span>
+                </div>
+              </div>
+              
+              <div class="timeline-item completed">
+                <div class="timeline-time">10:00 AM</div>
+                <div class="timeline-content">
+                  <h4>Practice Quiz</h4>
+                  <p>Neural Networks Basics • 20 min</p>
+                  <span class="status"><i class='bx bx-check'></i> Completed</span>
+                </div>
+              </div>
+              
+              <div class="timeline-item current">
+                <div class="timeline-time">2:00 PM</div>
+                <div class="timeline-content">
+                  <h4>Machine Learning Video Lecture</h4>
+                  <p>Supervised Learning • 30 min</p>
+                  <button class="start-btn"><i class='bx bx-play'></i> Start Now</button>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-time">3:30 PM</div>
+                <div class="timeline-content">
+                  <h4>Coding Challenge</h4>
+                  <p>Python Data Structures • 45 min</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-time">5:00 PM</div>
+                <div class="timeline-content">
+                  <h4>Review Session</h4>
+                  <p>Today's Materials • 30 min</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="schedule-footer">
+              <button class="schedule-btn"><i class='bx bx-edit'></i> Adjust Schedule</button>
+              <button class="schedule-btn"><i class='bx bx-calendar-plus'></i> Plan Tomorrow</button>
+            </div>
+          </div>
+          
+          <!-- Pomodoro Timer -->
+          <div class="plan-card pomodoro-card">
+            <div class="card-header">
+              <h3><i class='bx bx-time'></i> Pomodoro Timer</h3>
+            </div>
+            
+            <div class="pomodoro-container">
+              <div class="pomodoro-display">
+                <div class="timer-label">Focus Time</div>
+                <div class="timer-countdown">
+                  <span id="minutes">25</span>:<span id="seconds">00</span>
+                </div>
+                <div class="pomodoro-controls">
+                  <button id="pomodoro-start" class="timer-btn"><i class='bx bx-play'></i></button>
+                  <button id="pomodoro-pause" class="timer-btn" disabled><i class='bx bx-pause'></i></button>
+                  <button id="pomodoro-reset" class="timer-btn"><i class='bx bx-refresh'></i></button>
+                </div>
+              </div>
+              
+              <div class="pomodoro-settings">
+                <div class="setting-group">
+                  <label>Focus Time</label>
+                  <div class="time-setting">
+                    <button class="time-adjust-btn" data-action="decrease"><i class='bx bx-minus'></i></button>
+                    <span id="focus-time">25</span> min
+                    <button class="time-adjust-btn" data-action="increase"><i class='bx bx-plus'></i></button>
+                  </div>
+                </div>
+                
+                <div class="setting-group">
+                  <label>Break Time</label>
+                  <div class="time-setting">
+                    <button class="time-adjust-btn" data-action="decrease"><i class='bx bx-minus'></i></button>
+                    <span id="break-time">5</span> min
+                    <button class="time-adjust-btn" data-action="increase"><i class='bx bx-plus'></i></button>
+                  </div>
+                </div>
+                
+                <div class="setting-group">
+                  <label>Long Break</label>
+                  <div class="time-setting">
+                    <button class="time-adjust-btn" data-action="decrease"><i class='bx bx-minus'></i></button>
+                    <span id="long-break-time">15</span> min
+                    <button class="time-adjust-btn" data-action="increase"><i class='bx bx-plus'></i></button>
+                  </div>
+                </div>
+                
+                <div class="setting-group">
+                  <label>Sessions</label>
+                  <div class="time-setting">
+                    <button class="time-adjust-btn" data-action="decrease"><i class='bx bx-minus'></i></button>
+                    <span id="session-count">4</span>
+                    <button class="time-adjust-btn" data-action="increase"><i class='bx bx-plus'></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="pomodoro-stats">
+              <div class="stat-item">
+                <span class="stat-label">Today's Focus</span>
+                <span class="stat-value">1h 45m</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Completed</span>
+                <span class="stat-value">3 / 6</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Streak</span>
+                <span class="stat-value">5 days</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Study Resources -->
+          <div class="plan-card resources-card">
+            <div class="card-header">
+              <h3><i class='bx bx-book'></i> Today's Resources</h3>
+            </div>
+            
+            <div class="resources-list">
+              <div class="resource-item">
+                <div class="resource-icon pdf">
+                  <i class='bx bxs-file-pdf'></i>
+                </div>
+                <div class="resource-info">
+                  <h4>Neural Networks Lecture Notes</h4>
+                  <p>PDF • 12 pages</p>
+                </div>
+                <button class="resource-btn"><i class='bx bx-download'></i></button>
+              </div>
+              
+              <div class="resource-item">
+                <div class="resource-icon video">
+                  <i class='bx bxs-video'></i>
+                </div>
+                <div class="resource-info">
+                  <h4>Introduction to Supervised Learning</h4>
+                  <p>Video • 28 min</p>
+                </div>
+                <button class="resource-btn"><i class='bx bx-play'></i></button>
+              </div>
+              
+              <div class="resource-item">
+                <div class="resource-icon code">
+                  <i class='bx bxs-file-code'></i>
+                </div>
+                <div class="resource-info">
+                  <h4>Python Code Examples</h4>
+                  <p>Jupyter Notebook</p>
+                </div>
+                <button class="resource-btn"><i class='bx bx-code-block'></i></button>
+              </div>
+              
+              <div class="resource-item">
+                <div class="resource-icon quiz">
+                  <i class='bx bxs-brain'></i>
+                </div>
+                <div class="resource-info">
+                  <h4>Neural Networks Practice Quiz</h4>
+                  <p>10 questions • 15 min</p>
+                </div>
+                <button class="resource-btn"><i class='bx bx-right-arrow-alt'></i></button>
+              </div>
+            </div>
+            
+            <button class="view-all-resources">View All Resources</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>
+        /* Home Page Styles - Add to style.css */
+
+/* General Styles */
+:root {
+  --primary-color: #4d84e2;
+  --primary-light: #e7f0ff;
+  --primary-dark: #3a63b4;
+  --secondary-color: #ff7846;
+  --text-color: #333;
+  --text-light: #6c757d;
+  --border-color: #e1e5ea;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s ease;
+}
+
+.dark-theme {
+  --primary-light: #29396f;
+  --text-color: #f5f5f5;
+  --text-light: #c4c4c4;
+  --border-color: #2d2d2d;
+  --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: #1a1a2e;
+}
+
+/* Page Structure */
+.home-section {
+  padding: 20px 30px;
+}
+
+.page-title {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--primary-color);
+}
+
+/* Welcome Banner */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.welcome-banner {
+  background: linear-gradient(135deg, rgb(0, 159, 207) 20%, rgb(3, 3, 207) 60%, rgb(132, 0, 255) 80%);
+  background-size: 200% 200%;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 30px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: gradientAnimation 10s infinite, bounce 2.5s infinite;
+}
+
+
+.welcome-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  height: 10px;
+  width: 100%;
+  margin-top: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.streak-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 25px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.streak-counter i {
+  font-size: 2rem;
+  color: #f8c95a;
+}
+
+.streak-counter span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.streak-counter p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Overview Grid */
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.overview-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  padding: 20px;
+  height: 100%;
+}
+
+.dark-theme .overview-card {
+  background-color: #242444;
+}
+
+.stats-card {
+  grid-column: span 1;
+}
+
+.action-card {
+  grid-column: span 1;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-header h3 {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.card-header h3 i {
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+
+.view-all {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.view-all:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* Recently Watched Videos */
+.video-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.video-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.video-item:hover {
+  background-color: var(--primary-light);
+}
+
+.video-thumbnail {
+  position: relative;
+  width: 120px;
+  height: 68px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-duration {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 0.7rem;
+}
+
+.video-info {
+  flex: 1;
+}
+
+.video-info h4 {
+  margin-bottom: 5px;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.video-info p {
+  color: var(--text-light);
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.video-info .progress-bar {
+  height: 5px;
+  background-color: var(--border-color);
+  margin-top: 5px;
+}
+
+.video-info .progress-fill {
+  background-color: var(--primary-color);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: var(--text-color);
+  color: var(--bg-color);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+.resume-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.resume-btn:hover {
+  background-color: var(--primary-dark);
+  transform: scale(1.1);
+}
+
+/* Favorite Topics */
+.topics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.topic-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.topic-item:hover {
+  background-color: var(--primary-light);
+}
+
+.topic-item i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-right: 15px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.topic-info {
+  flex: 1;
+}
+
+.topic-info h4 {
+  color: var(--text-color);
+  margin-bottom: 3px;
+  font-size: 0.95rem;
+}
+
+.topic-info p {
+  color: var(--text-light);
+  font-size: 0.8rem;
+}
+
+.completion {
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Learning Stats */
+.time-filter {
+  display: flex;
+  gap: 5px;
+}
+
+.time-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.time-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.stats-chart {
+  height: 220px;
+  margin-top: 10px;
+}
+
+/* Next Best Action */
+.action-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: var(--primary-light);
+  transition: var(--transition);
+}
+
+.dark-theme .action-item {
+  background-color: rgba(77, 132, 226, 0.1);
+}
+
+.action-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.action-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.dark-theme .action-icon {
+  background-color: #333355;
+}
+
+.action-icon i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.action-info {
+  flex: 1;
+}
+
+.action-info h4 {
+  color: var(--text-color);
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+.action-info p {
+  color: var(--text-light);
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.action-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+    </style>
+    <script src="script.js"></script>
+    <script src="home.js"></script>
+  </body>
+</html>
