@@ -1128,36 +1128,99 @@
   background-color: var(--primary-light);
 }
 
-/* Enhanced Media Queries for Responsiveness */
+/* Enhanced Media Queries for Responsiveness *//* Enhanced Media Queries for Responsiveness */
 @media (max-width: 1200px) {
   .overview-grid, .plan-grid {
+    grid-template-columns: 1fr;
     gap: 20px;
   }
   
+  .resources-card {
+    grid-column: span 1;
+  }
+  
   .resources-list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 992px) {
-  .tracker-header {
+  .welcome-banner {
     flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .streak-counter {
+    width: 100%;
+  }
+  
+  .home-section {
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overview-grid, .plan-grid {
     gap: 15px;
   }
   
-  .tracker-stats {
-    flex-wrap: wrap;
-    gap: 15px;
+  .plan-card, .overview-card {
+    padding: 15px;
+  }
+  
+  .schedule-footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .schedule-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .pomodoro-settings {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+  }
+  
+  .welcome-content h2 {
+    font-size: 1.3rem;
+  }
+  
+  .card-header h3 {
+    font-size: 1rem;
+  }
+  
+  .video-thumbnail {
+    width: 100px;
+    height: 56px;
+  }
+  
+  .timeline-time {
+    min-width: 65px;
+    font-size: 0.85rem;
+  }
+  
+  .pomodoro-controls {
+    justify-content: center;
   }
   
   .stat-box {
-    min-width: 120px;
+    min-width: 100%;
   }
   
-  .overview-grid {
-    grid-template-columns: 1fr;
+  .tracker-stats {
+    gap: 10px;
   }
-  
-  .stats-card, .action-card {
-    grid-column: span 1;
-  }
+}

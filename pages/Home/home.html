@@ -14,7 +14,6 @@
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/10.3.3/highcharts.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-
   </head>
   <body class="light-theme">
     <div class="sidebar close">
@@ -284,67 +283,6 @@
               </div>
             </div>
             <div id="learningStatsChart" class="stats-chart"></div>
-            <!-- Add this to your home.html file as a new section -->
-            <div id="progress-tracker" class="section">
-              <h2 class="section-title">Coding Progress</h2>
-              
-              <div class="progress-tracker-card">
-                <div class="tracker-header">
-                  <div class="tracker-title">
-                    <h3><i class='bx bx-code-block'></i> Your Coding Activity</h3>
-                  </div>
-                  <div class="tracker-stats">
-                    <div class="stat-box">
-                      <span class="stat-value">854</span>
-                      <span class="stat-label">submissions in the past year</span>
-                    </div>
-                    <div class="stat-box">
-                      <span class="stat-value">179</span>
-                      <span class="stat-label">Total active days</span>
-                    </div>
-                    <div class="stat-box">
-                      <span class="stat-value">52</span>
-                      <span class="stat-label">Max streak</span>
-                    </div>
-                    <div class="stat-box">
-                      <span class="stat-value">14</span>
-                      <span class="stat-label">Current streak</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="contribution-calendar">
-                  <div class="calendar-months">
-                    <span>Mar</span>
-                    <span>Apr</span>
-                    <span>May</span>
-                    <span>Jun</span>
-                    <span>Jul</span>
-                    <span>Aug</span>
-                    <span>Sep</span>
-                    <span>Oct</span>
-                    <span>Nov</span>
-                    <span>Dec</span>
-                    <span>Jan</span>
-                    <span>Feb</span>
-                    <span>Mar</span>
-                  </div>
-                  <div class="calendar-heatmap" id="activity-heatmap"></div>
-                  <div class="calendar-legend">
-                    <span class="legend-label">Less</span>
-                    <div class="legend-squares">
-                      <div class="legend-square" data-level="0"></div>
-                      <div class="legend-square" data-level="1"></div>
-                      <div class="legend-square" data-level="2"></div>
-                      <div class="legend-square" data-level="3"></div>
-                      <div class="legend-square" data-level="4"></div>
-                    </div>
-                    <span class="legend-label">More</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
           
           <!-- Next Best Action -->
@@ -390,12 +328,69 @@
         </div>
       </div>
       
-      
+      <!-- Coding Progress Section -->
+      <div id="progress-tracker" class="section">
+        <h2 class="section-title">Coding Progress</h2>
+        
+        <div class="progress-tracker-card">
+          <div class="tracker-header">
+            <div class="tracker-title">
+              <h3><i class='bx bx-code-block'></i> Your Coding Activity</h3>
+            </div>
+            <div class="tracker-stats">
+              <div class="stat-box">
+                <span class="stat-value">854</span>
+                <span class="stat-label">submissions in the past year</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-value">179</span>
+                <span class="stat-label">Total active days</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-value">52</span>
+                <span class="stat-label">Max streak</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-value">14</span>
+                <span class="stat-label">Current streak</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contribution-calendar">
+            <div class="calendar-months">
+              <span>Mar</span>
+              <span>Apr</span>
+              <span>May</span>
+              <span>Jun</span>
+              <span>Jul</span>
+              <span>Aug</span>
+              <span>Sep</span>
+              <span>Oct</span>
+              <span>Nov</span>
+              <span>Dec</span>
+              <span>Jan</span>
+              <span>Feb</span>
+              <span>Mar</span>
+            </div>
+            <div class="calendar-heatmap" id="activity-heatmap"></div>
+            <div class="calendar-legend">
+              <span class="legend-label">Less</span>
+              <div class="legend-squares">
+                <div class="legend-square" data-level="0"></div>
+                <div class="legend-square" data-level="1"></div>
+                <div class="legend-square" data-level="2"></div>
+                <div class="legend-square" data-level="3"></div>
+                <div class="legend-square" data-level="4"></div>
+              </div>
+              <span class="legend-label">More</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script src="/script.js"></script>
-    <script>
-     
-  
-    </script>
+    <script src="home.js"></script>
   </body>
 </html>
