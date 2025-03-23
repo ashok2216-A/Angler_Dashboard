@@ -15,7 +15,7 @@
 
 [data-theme="dark"] {
   --bg-color: #000000;
-  --text-color: #7bd6fa9c;
+  --text-color: #000000d9;
 }
 
 body {
@@ -32,8 +32,8 @@ body {
   height: 40px;
   border-radius: 50%;
   border: none;
-  background: var(--text-color);
-  color: var(--bg-color);
+  background: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   font-size: 20px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;

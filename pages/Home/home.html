@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Angler - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,24 +16,24 @@
   <body class="light-theme">
     <div class="sidebar close">
       <div class="logo-details">
-        <img src="logo.png" alt="Logo" style="width: 75px; height: 55px;">
+        <img src="/logo.png" alt="Logo" style="width: 75px; height: 55px;">
         <span class="logo_name">Angler</span>
       </div>    
       <ul class="nav-links">
         <li>
           <div class="iocn-link">
-            <a href="#">
+            <a href="#" class="active">
               <i class='bx bx-grid-alt'></i>
               <span class="link_name">Home</span>
             </a>
             <i class='bx bxs-chevron-down arrow'></i>
           </div>
           <ul class="sub-menu">
-            <li><a href="#">Overview</a></li>
-            <li><a href="#">Today's Plan</a></li>
+            <li><a href="#overview" class="active">Overview</a></li>
+            <li><a href="#todays-plan">Today's Plan</a></li>
           </ul>
         </li>
-      
+        
         <li>
           <div class="iocn-link">
             <a href="#">
@@ -123,29 +124,32 @@
             <li><a href="#">Feedback</a></li>
           </ul>
         </li>
-      </ul>  
-
+      </ul>
+      </ul>
+      
       <li>
         <div class="profile-details">
           <div class="profile-content">
-            <img src="profile.jpg" alt="profileImg">
+            <img src="/profile.jpg" alt="profileImg">
           </div>
           <div class="name-job">
             <div class="profile_name">Ashok</div>
             <div class="job">Person</div>
           </div>
-          <i class='bx bx-log-out' ></i>
+          <!-- <i class='bx bx-log-out' ></i> -->
         </div>
       </li>
     </div>
     
     <section class="home-section">
+      <i class='bx bx-menu' style="color: rgba(0, 0, 0, 0);"></i>
+      <h1 class="page-title">Home</h1>
       <div class="home-content">
-        <i class='bx bx-menu'></i>
         <button id="theme-toggle" class="theme-toggle">
+
           <span class="toggle-icon">🌙</span>
         </button>
-        <h1 class="page-title">Home</h1>
+        
       </div>
       
       <!-- Welcome Banner -->
@@ -279,6 +283,67 @@
               </div>
             </div>
             <div id="learningStatsChart" class="stats-chart"></div>
+            <!-- Add this to your home.html file as a new section -->
+            <div id="progress-tracker" class="section">
+              <h2 class="section-title">Coding Progress</h2>
+              
+              <div class="progress-tracker-card">
+                <div class="tracker-header">
+                  <div class="tracker-title">
+                    <h3><i class='bx bx-code-block'></i> Your Coding Activity</h3>
+                  </div>
+                  <div class="tracker-stats">
+                    <div class="stat-box">
+                      <span class="stat-value">854</span>
+                      <span class="stat-label">submissions in the past year</span>
+                    </div>
+                    <div class="stat-box">
+                      <span class="stat-value">179</span>
+                      <span class="stat-label">Total active days</span>
+                    </div>
+                    <div class="stat-box">
+                      <span class="stat-value">52</span>
+                      <span class="stat-label">Max streak</span>
+                    </div>
+                    <div class="stat-box">
+                      <span class="stat-value">14</span>
+                      <span class="stat-label">Current streak</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="contribution-calendar">
+                  <div class="calendar-months">
+                    <span>Mar</span>
+                    <span>Apr</span>
+                    <span>May</span>
+                    <span>Jun</span>
+                    <span>Jul</span>
+                    <span>Aug</span>
+                    <span>Sep</span>
+                    <span>Oct</span>
+                    <span>Nov</span>
+                    <span>Dec</span>
+                    <span>Jan</span>
+                    <span>Feb</span>
+                    <span>Mar</span>
+                  </div>
+                  <div class="calendar-heatmap" id="activity-heatmap"></div>
+                  <div class="calendar-legend">
+                    <span class="legend-label">Less</span>
+                    <div class="legend-squares">
+                      <div class="legend-square" data-level="0"></div>
+                      <div class="legend-square" data-level="1"></div>
+                      <div class="legend-square" data-level="2"></div>
+                      <div class="legend-square" data-level="3"></div>
+                      <div class="legend-square" data-level="4"></div>
+                    </div>
+                    <span class="legend-label">More</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
           
           <!-- Next Best Action -->
@@ -522,469 +587,222 @@
         </div>
       </div>
     </section>
-    <style>
-        /* Home Page Styles - Add to style.css */
 
-/* General Styles */
-:root {
-  --primary-color: #4d84e2;
-  --primary-light: #e7f0ff;
-  --primary-dark: #3a63b4;
-  --secondary-color: #ff7846;
-  --text-color: #333;
-  --text-light: #6c757d;
-  --border-color: #e1e5ea;
-  --success-color: #28a745;
-  --warning-color: #ffc107;
-  --danger-color: #dc3545;
-  --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  --transition: all 0.3s ease;
-}
-
-.dark-theme {
-  --primary-light: #29396f;
-  --text-color: #f5f5f5;
-  --text-light: #c4c4c4;
-  --border-color: #2d2d2d;
-  --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  background-color: #1a1a2e;
-}
-
-/* Page Structure */
-.home-section {
-  padding: 20px 30px;
-}
-
-.page-title {
-  margin-top: 15px;
-  margin-bottom: 25px;
-  font-size: 2rem;
-  color: var(--text-color);
-}
-
-.section {
-  margin-bottom: 40px;
-}
-
-.section-title {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  color: var(--text-color);
-  position: relative;
-  padding-bottom: 10px;
-}
-
-.section-title:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 50px;
-  height: 3px;
-  background: var(--primary-color);
-}
-
-/* Welcome Banner */
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-3px);
-  }
-}
-
-.welcome-banner {
-  background: linear-gradient(135deg, rgb(0, 159, 207) 20%, rgb(3, 3, 207) 60%, rgb(132, 0, 255) 80%);
-  background-size: 200% 200%;
-  border-radius: 10px;
-  padding: 25px;
-  margin-bottom: 30px;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  animation: gradientAnimation 10s infinite, bounce 2.5s infinite;
-}
-
-
-.welcome-content h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.progress-bar {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  height: 10px;
-  width: 100%;
-  margin-top: 15px;
-  position: relative;
-  overflow: hidden;
-}
-
-.progress-fill {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: white;
-  border-radius: 10px;
-  transition: width 0.5s ease;
-}
-
-.streak-counter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 15px 25px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-}
-
-.streak-counter i {
-  font-size: 2rem;
-  color: #f8c95a;
-}
-
-.streak-counter span {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 5px 0;
-}
-
-.streak-counter p {
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-/* Overview Grid */
-.overview-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-}
-
-.overview-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: var(--card-shadow);
-  padding: 20px;
-  height: 100%;
-}
-
-.dark-theme .overview-card {
-  background-color: #242444;
-}
-
-.stats-card {
-  grid-column: span 1;
-}
-
-.action-card {
-  grid-column: span 1;
-}
-
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.card-header h3 {
-  display: flex;
-  align-items: center;
-  font-size: 1.2rem;
-  color: var(--text-color);
-}
-
-.card-header h3 i {
-  margin-right: 10px;
-  color: var(--primary-color);
-}
-
-.view-all {
-  color: var(--primary-color);
-  font-size: 0.9rem;
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-.view-all:hover {
-  color: var(--primary-dark);
-  text-decoration: underline;
-}
-
-/* Recently Watched Videos */
-.video-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.video-item {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  border-radius: 8px;
-  transition: var(--transition);
-}
-
-.video-item:hover {
-  background-color: var(--primary-light);
-}
-
-.video-thumbnail {
-  position: relative;
-  width: 120px;
-  height: 68px;
-  border-radius: 5px;
-  overflow: hidden;
-  margin-right: 15px;
-}
-
-.video-thumbnail img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.video-duration {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 2px 5px;
-  border-radius: 3px;
-  font-size: 0.7rem;
-}
-
-.video-info {
-  flex: 1;
-}
-
-.video-info h4 {
-  margin-bottom: 5px;
-  color: var(--text-color);
-  font-size: 0.95rem;
-}
-
-.video-info p {
-  color: var(--text-light);
-  font-size: 0.8rem;
-  margin-bottom: 5px;
-}
-
-.video-info .progress-bar {
-  height: 5px;
-  background-color: var(--border-color);
-  margin-top: 5px;
-}
-
-.video-info .progress-fill {
-  background-color: var(--primary-color);
-}
-
-.theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: none;
-  background: var(--text-color);
-  color: var(--bg-color);
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.theme-toggle:hover {
-  transform: scale(1.1);
-}
-
-.resume-btn {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.resume-btn:hover {
-  background-color: var(--primary-dark);
-  transform: scale(1.1);
-}
-
-/* Favorite Topics */
-.topics-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.topic-item {
-  display: flex;
-  align-items: center;
-  padding: 12px;
-  border-radius: 8px;
-  transition: var(--transition);
-}
-
-.topic-item:hover {
-  background-color: var(--primary-light);
-}
-
-.topic-item i {
-  font-size: 1.5rem;
-  color: var(--primary-color);
-  margin-right: 15px;
-  min-width: 30px;
-  text-align: center;
-}
-
-.topic-info {
-  flex: 1;
-}
-
-.topic-info h4 {
-  color: var(--text-color);
-  margin-bottom: 3px;
-  font-size: 0.95rem;
-}
-
-.topic-info p {
-  color: var(--text-light);
-  font-size: 0.8rem;
-}
-
-.completion {
-  background-color: var(--primary-light);
-  color: var(--primary-color);
-  padding: 3px 8px;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
-/* Learning Stats */
-.time-filter {
-  display: flex;
-  gap: 5px;
-}
-
-.time-btn {
-  background: none;
-  border: 1px solid var(--border-color);
-  border-radius: 5px;
-  padding: 5px 10px;
-  font-size: 0.8rem;
-  color: var(--text-light);
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.time-btn.active {
-  background-color: var(--primary-color);
-  color: white;
-  border-color: var(--primary-color);
-}
-
-.stats-chart {
-  height: 220px;
-  margin-top: 10px;
-}
-
-/* Next Best Action */
-.action-content {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.action-item {
-  display: flex;
-  align-items: center;
-  padding: 15px;
-  border-radius: 8px;
-  background-color: var(--primary-light);
-  transition: var(--transition);
-}
-
-.dark-theme .action-item {
-  background-color: rgba(77, 132, 226, 0.1);
-}
-
-.action-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-}
-
-.action-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  background-color: white;
-  border-radius: 50%;
-  margin-right: 15px;
-}
-
-.dark-theme .action-icon {
-  background-color: #333355;
-}
-
-.action-icon i {
-  font-size: 1.5rem;
-  color: var(--primary-color);
-}
-
-.action-info {
-  flex: 1;
-}
-
-.action-info h4 {
-  color: var(--text-color);
-  margin-bottom: 5px;
-  font-size: 0.95rem;
-}
-
-.action-info p {
-  color: var(--text-light);
-  font-size: 0.8rem;
-  margin-bottom: 10px;
-}
-
-.action-btn {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 12px;
-  font-size: 0.8rem;
-  cursor: pointer;
+    <script src="/script.js"></script>
+    <script>
+      // This would go in either script.js or home.js
+
+      // Sidebar toggle functionality
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e)=>{
+          let arrowParent = e.target.parentElement.parentElement;
+          arrowParent.classList.toggle("showMenu");
+        });
+      }
+
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      sidebarBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("close");
+      });
+
+      // Theme toggle functionality
+      const themeToggle = document.getElementById('theme-toggle');
+      const toggleIcon = document.querySelector('.toggle-icon');
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        toggleIcon.textContent = document.body.classList.contains('dark-theme') ? '☀️' : '🌙';
+      });
+
+      // Pomodoro timer functionality
+      const pomodoroStart = document.getElementById('pomodoro-start');
+      const pomodoroPause = document.getElementById('pomodoro-pause');
+      const pomodoroReset = document.getElementById('pomodoro-reset');
+      const minutesDisplay = document.getElementById('minutes');
+      const secondsDisplay = document.getElementById('seconds');
+
+      let timer;
+      let minutes = 25;
+      let seconds = 0;
+      let isRunning = false;
+
+      pomodoroStart.addEventListener('click', startTimer);
+      pomodoroPause.addEventListener('click', pauseTimer);
+      pomodoroReset.addEventListener('click', resetTimer);
+
+      function startTimer() {
+        if (!isRunning) {
+          isRunning = true;
+          pomodoroStart.disabled = true;
+          pomodoroPause.disabled = false;
+          
+          timer = setInterval(() => {
+            if (seconds === 0) {
+              if (minutes === 0) {
+                clearInterval(timer);
+                isRunning = false;
+                pomodoroStart.disabled = false;
+                pomodoroPause.disabled = true;
+                // Timer completed logic
+                return;
+              }
+              minutes--;
+              seconds = 59;
+            } else {
+              seconds--;
+            }
+            updateDisplay();
+          }, 1000);
+        }
+      }
+
+      function pauseTimer() {
+        clearInterval(timer);
+        isRunning = false;
+        pomodoroStart.disabled = false;
+        pomodoroPause.disabled = true;
+      }
+
+      function resetTimer() {
+        clearInterval(timer);
+        isRunning = false;
+        minutes = 25;
+        seconds = 0;
+        updateDisplay();
+        pomodoroStart.disabled = false;
+        pomodoroPause.disabled = true;
+      }
+
+      function updateDisplay() {
+        minutesDisplay.textContent = minutes.toString().padStart(2, '0');
+        secondsDisplay.textContent = seconds.toString().padStart(2, '0');
+      }
+
+      // Time adjustment buttons
+      const timeAdjustBtns = document.querySelectorAll('.time-adjust-btn');
+      timeAdjustBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const action = btn.dataset.action;
+          const settingElement = btn.parentElement.querySelector('span');
+          let value = parseInt(settingElement.textContent);
+          
+          if (action === 'increase') {
+            value++;
+          } else if (action === 'decrease' && value > 1) {
+            value--;
+          }
+          
+          settingElement.textContent = value;
+          
+          // Update timer settings
+          if (settingElement.id === 'focus-time') {
+            minutes = value;
+            updateDisplay();
+          }
+        });
+      });
+
+      // Learning stats chart
+      document.addEventListener('DOMContentLoaded', function() {
+        const learningStatsChart = document.getElementById('learningStatsChart');
+        
+        // Sample data for the chart
+        const chartData = {
+          categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          series: [
+            {
+              name: 'Study Time (minutes)',
+              data: [45, 60, 90, 30, 75, 120, 60]
+            }
+          ]
+        };
+        
+        // Create chart using Highcharts
+        Highcharts.chart(learningStatsChart, {
+          chart: {
+            type: 'column',
+            backgroundColor: 'transparent'
+          },
+          title: {
+            text: null
+          },
+          xAxis: {
+            categories: chartData.categories
+          },
+          yAxis: {
+            title: {
+              text: 'Minutes'
+            }
+          },
+          series: chartData.series,
+          credits: {
+            enabled: false
+          },
+          colors: ['#4d84e2']
+        });
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+    // Generate the heatmap
+    generateHeatmap();
+    
+    // Function to generate heatmap
+    function generateHeatmap() {
+      const heatmapContainer = document.getElementById('activity-heatmap');
+      
+      // Generate 53 weeks (1 year + 1 week)
+      for (let week = 0; week < 53; week++) {
+        const weekEl = document.createElement('div');
+        weekEl.className = 'calendar-week';
+        
+        // Generate 7 days per week
+        for (let day = 0; day < 7; day++) {
+          const dayEl = document.createElement('div');
+          dayEl.className = 'calendar-day';
+          
+          // Random activity level (0-4) for demonstration
+          // In a real app, this would come from your database
+          const level = Math.floor(Math.random() * 5);
+          dayEl.setAttribute('data-level', level);
+          
+          // Special markers for achievements
+          if (week === 25 && day === 3) {
+            dayEl.innerHTML = '<i class="bx bxs-medal" style="font-size: 8px;"></i>';
+            dayEl.classList.add('achievement-day');
+          }
+          
+          // Add tooltip with activity details
+          dayEl.setAttribute('data-tooltip', getTooltipText(level));
+          
+          weekEl.appendChild(dayEl);
+        }
+        
+        heatmapContainer.appendChild(weekEl);
+      }
+    }
+    
+    // Function to get tooltip text based on activity level
+    function getTooltipText(level) {
+      const submissions = level === 0 ? 0 : level * Math.floor(Math.random() * 5 + 1);
+      const date = new Date();
+      date.setDate(date.getDate() - Math.floor(Math.random() * 365));
+      const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+      
+      if (level === 0) {
+        return `No submissions on ${dateStr}`;
+      } else {
+        return `${submissions} submissions on ${dateStr}`;
+      }
+    }
+    
+    // Theme toggling functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', function() {
+      document.body.classList.toggle('dark-theme');
+      const icon = themeToggle.querySelector('.toggle-icon');
+      icon.textContent = document.body.classList.contains('dark-theme') ? '☀️' : '🌙';
+    });
+  });
+    </script>
+  </body>
+</html>
