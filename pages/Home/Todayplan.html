@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Angler - Home</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "/home.js"></script>
+    
+  </head>
+  <body class="light-theme">
+    <div class="sidebar close">
+      <div class="logo-details">
+        <img src="/logo.png" alt="Logo" style="width: 75px; height: 55px;">
+        <span class="logo_name">Angler</span>
+      </div>    
+      <ul class="nav-links">
+        <li>
+          <div class="iocn-link">
+            <a href="#" class="active">
+              <i class='bx bx-grid-alt'></i>
+              <span class="link_name">Home</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a href="#overview" class="active">Overview</a></li>
+            <li><a href="#todays-plan">Today's Plan</a></li>
+          </ul>
+        </li>
+        
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class='bx bx-search'></i>
+              <span class="link_name">Search</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Topics</a></li>
+            <li><a href="#">Notes</a></li>
+            <li><a href="#">Roadmaps</a></li>
+          </ul>
+        </li>
+      
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class='bx bx-brain'></i>
+              <span class="link_name">Learn</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a href="#">Quizzes</a></li>
+            <li><a href="#">Revision</a></li>
+            <li><a href="#">Challenges</a></li>
+          </ul>
+        </li>
+      
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class='bx bx-bar-chart-alt'></i>
+              <span class="link_name">Progress</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a href="#">Streaks</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Badges</a></li>
+          </ul>
+        </li>
+      
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class='bx bx-group'></i>
+              <span class="link_name">Collaborate</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a href="#">Groups</a></li>
+            <li><a href="#">Discussions</a></li>
+            <li><a href="#">Leaderboard</a></li>
+          </ul>
+        </li>
+      
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class='bx bx-cog'></i>
+              <span class="link_name">Settings</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Subscription</a></li>
+            <li><a href="#">Assistant</a></li>
+          </ul>
+        </li>
+      
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class='bx bx-help-circle'></i>
+              <span class="link_name">Help</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Feedback</a></li>
+          </ul>
+        </li>
+        
+        <li>
+          <div class="profile-details">
+            <div class="profile-content">
+              <img src="/profile.jpg" alt="profileImg">
+            </div>
+            <div class="name-job">
+              <div class="profile_name">Ashok</div>
+              <div class="job">Person</div>
+            </div>
+            <!-- <i class='bx bx-log-out' ></i> -->
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+    <section class="home-section">
+      <h1 class="page-title">Home</h1>
+      <i class='bx bx-menu' style="color: rgba(0, 0, 0, 0); size: 0em;"></i>
+      <div class="home-content">
+        <button id="theme-toggle" class="theme-toggle">
+          <span class="toggle-icon">🌙</span>
+        </button>
+        
+      </div>
+      <!-- Today's Plan Section -->
+<div id="todays-plan" class="section">
+    <h2 class="section-title">Today's Plan</h2>
+    
+    <div class="plan-grid">
+      <!-- Daily Schedule -->
+      <div class="plan-card schedule-card">
+        <div class="card-header">
+          <h3><i class='bx bx-calendar'></i> Daily Study Schedule</h3>
+          <div class="date-navigation">
+            <button class="date-nav-btn"><i class='bx bx-chevron-left'></i></button>
+            <span class="current-date">March 23, 2025</span>
+            <button class="date-nav-btn"><i class='bx bx-chevron-right'></i></button>
+          </div>
+        </div>
+        
+        <div class="schedule-timeline">
+          <div class="timeline-item completed">
+            <div class="timeline-time">9:00 AM</div>
+            <div class="timeline-content">
+              <h4>Neural Networks Review</h4>
+              <p>Chapters 3-4 • 45 min</p>
+              <span class="status"><i class='bx bx-check'></i> Completed</span>
+            </div>
+          </div>
+          
+          <div class="timeline-item completed">
+            <div class="timeline-time">10:00 AM</div>
+            <div class="timeline-content">
+              <h4>Practice Quiz</h4>
+              <p>Neural Networks Basics • 20 min</p>
+              <span class="status"><i class='bx bx-check'></i> Completed</span>
+            </div>
+          </div>
+          
+          <div class="timeline-item current">
+            <div class="timeline-time">2:00 PM</div>
+            <div class="timeline-content">
+              <h4>Machine Learning Video Lecture</h4>
+              <p>Supervised Learning • 30 min</p>
+              <button class="start-btn"><i class='bx bx-play'></i> Start Now</button>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-time">3:30 PM</div>
+            <div class="timeline-content">
+              <h4>Coding Challenge</h4>
+              <p>Python Data Structures • 45 min</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-time">5:00 PM</div>
+            <div class="timeline-content">
+              <h4>Review Session</h4>
+              <p>Today's Materials • 30 min</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="schedule-footer">
+          <button class="schedule-btn"><i class='bx bx-edit'></i> Adjust Schedule</button>
+          <button class="schedule-btn"><i class='bx bx-calendar-plus'></i> Plan Tomorrow</button>
+        </div>
+      </div>
+      
+      <!-- Pomodoro Timer -->
+      <div class="plan-card pomodoro-card">
+        <div class="card-header">
+          <h3><i class='bx bx-time'></i> Pomodoro Timer</h3>
+        </div>
+        
+        <div class="pomodoro-container">
+          <div class="pomodoro-display">
+            <div class="timer-label">Focus Time</div>
+            <div class="timer-countdown">
+              <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            <div class="pomodoro-controls">
+              <button id="pomodoro-start" class="timer-btn"><i class='bx bx-play'></i></button>
+              <button id="pomodoro-pause" class="timer-btn" disabled><i class='bx bx-pause'></i></button>
+              <button id="pomodoro-reset" class="timer-btn"><i class='bx bx-refresh'></i></button>
+            </div>
+          </div>
+          
+          <div class="pomodoro-settings">
+            <div class="setting-group">
+              <label>Focus Time</label>
+              <div class="time-setting">
+                <button class="time-adjust-btn" data-action="decrease"><i class='bx bx-minus'></i></button>
+                <span id="focus-time">25</span> min
+                <button class="time-adjust-btn" data-action="increase"><i class='bx bx-plus'></i></button>
+              </div>
+            </div>
+            
+            <div class="setting-group">
+              <label>Break Time</label>
+              <div class="time-setting">
+                <button class="time-adjust-btn" data-action="decrease"><i class='bx bx-minus'></i></button>
+                <span id="break-time">5</span> min
+                <button class="time-adjust-btn" data-action="increase"><i class='bx bx-plus'></i></button>
+              </div>
+            </div>
+            
+            <div class="setting-group">
+              <label>Long Break</label>
+              <div class="time-setting">
+                <button class="time-adjust-btn" data-action="decrease"><i class='bx bx-minus'></i></button>
+                <span id="long-break-time">15</span> min
+                <button class="time-adjust-btn" data-action="increase"><i class='bx bx-plus'></i></button>
+              </div>
+            </div>
+            
+            <div class="setting-group">
+              <label>Sessions</label>
+              <div class="time-setting">
+                <button class="time-adjust-btn" data-action="decrease"><i class='bx bx-minus'></i></button>
+                <span id="session-count">4</span>
+                <button class="time-adjust-btn" data-action="increase"><i class='bx bx-plus'></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pomodoro-stats">
+          <div class="stat-item">
+            <span class="stat-label">Today's Focus</span>
+            <span class="stat-value">1h 45m</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Completed</span>
+            <span class="stat-value">3 / 6</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Streak</span>
+            <span class="stat-value">5 days</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Study Resources -->
+      <div class="plan-card resources-card">
+        <div class="card-header">
+          <h3><i class='bx bx-book'></i> Today's Resources</h3>
+        </div>
+        
+        <div class="resources-list">
+          <div class="resource-item">
+            <div class="resource-icon pdf">
+              <i class='bx bxs-file-pdf'></i>
+            </div>
+            <div class="resource-info">
+              <h4>Neural Networks Lecture Notes</h4>
+              <p>PDF • 12 pages</p>
+            </div>
+            <button class="resource-btn"><i class='bx bx-download'></i></button>
+          </div>
+          
+          <div class="resource-item">
+            <div class="resource-icon video">
+              <i class='bx bxs-video'></i>
+            </div>
+            <div class="resource-info">
+              <h4>Introduction to Supervised Learning</h4>
+              <p>Video • 28 min</p>
+            </div>
+            <button class="resource-btn"><i class='bx bx-play'></i></button>
+          </div>
+          
+          <div class="resource-item">
+            <div class="resource-icon code">
+              <i class='bx bxs-file-code'></i>
+            </div>
+            <div class="resource-info">
+              <h4>Python Code Examples</h4>
+              <p>Jupyter Notebook</p>
+            </div>
+            <button class="resource-btn"><i class='bx bx-code-block'></i></button>
+          </div>
+          
+          <div class="resource-item">
+            <div class="resource-icon quiz">
+              <i class='bx bxs-brain'></i>
+            </div>
+            <div class="resource-info">
+              <h4>Neural Networks Practice Quiz</h4>
+              <p>10 questions • 15 min</p>
+            </div>
+            <button class="resource-btn"><i class='bx bx-right-arrow-alt'></i></button>
+          </div>
+        </div>
+        
+        <button class="view-all-resources">View All Resources</button>
+      </div>
+    </div>
+  </div>
+</section>
+<script src = "/script.js"></script>
+</body>
+</html>
