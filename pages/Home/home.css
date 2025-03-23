@@ -148,7 +148,7 @@
   border-radius: 10px;
   box-shadow: var(--card-shadow);
   padding: 20px;
-  height: 100%;
+  height: 95%;
 }
 
 .dark-theme .overview-card {
@@ -1222,5 +1222,9 @@
   
   .tracker-stats {
     gap: 10px;
+  }
+
+  .overview-card action-card {
+    grid-column: span 1;
   }
 }
