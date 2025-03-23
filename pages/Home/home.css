@@ -86,7 +86,6 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-
 .welcome-content h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
@@ -664,6 +663,7 @@
   border-top: 1px solid var(--border-color);
 }
 
+/* Common stat styles - consolidated from duplicates */
 .stat-item {
   display: flex;
   flex-direction: column;
@@ -856,17 +856,6 @@
   min-width: 150px;
 }
 
-.stat-value {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: var(--text-color);
-}
-
-.stat-label {
-  font-size: 0.9rem;
-  color: var(--text-light);
-}
-
 /* Contribution Calendar */
 .contribution-calendar {
   margin-bottom: 30px;
@@ -905,36 +894,42 @@
   justify-content: center;
 }
 
-.dark-theme .calendar-day[data-level="0"] {
-  background-color: #1d1d1d;
+/* Standardized calendar day colors for light theme */
+.calendar-day[data-level="0"] {
+  background-color: #ebedf0;
 }
 
 .calendar-day[data-level="1"] {
   background-color: #9be9a8;
 }
 
-.dark-theme .calendar-day[data-level="1"] {
-  background-color: #0e4429;
-}
-
 .calendar-day[data-level="2"] {
   background-color: #40c463;
-}
-
-.dark-theme .calendar-day[data-level="2"] {
-  background-color: #006d32;
 }
 
 .calendar-day[data-level="3"] {
   background-color: #30a14e;
 }
 
-.dark-theme .calendar-day[data-level="3"] {
-  background-color: #26a641;
-}
-
 .calendar-day[data-level="4"] {
   background-color: #216e39;
+}
+
+/* Standardized calendar day colors for dark theme */
+.dark-theme .calendar-day[data-level="0"] {
+  background-color: #1d1d1d;
+}
+
+.dark-theme .calendar-day[data-level="1"] {
+  background-color: #0e4429;
+}
+
+.dark-theme .calendar-day[data-level="2"] {
+  background-color: #006d32;
+}
+
+.dark-theme .calendar-day[data-level="3"] {
+  background-color: #26a641;
 }
 
 .dark-theme .calendar-day[data-level="4"] {
@@ -996,20 +991,19 @@
   border-radius: 2px;
 }
 
-/* Light Theme */
-.legend-square[data-level="0"] { background-color: #dfefff; }
-.legend-square[data-level="1"] { background-color: #a0c6ff; }
-.legend-square[data-level="2"] { background-color: #6caeff; }
-.legend-square[data-level="3"] { background-color: #3e92ff; }
-.legend-square[data-level="4"] { background-color: #166bce; }
+/* Standardized legend colors to match calendar-day colors */
+.legend-square[data-level="0"] { background-color: #ebedf0; }
+.legend-square[data-level="1"] { background-color: #9be9a8; }
+.legend-square[data-level="2"] { background-color: #40c463; }
+.legend-square[data-level="3"] { background-color: #30a14e; }
+.legend-square[data-level="4"] { background-color: #216e39; }
 
 /* Dark Theme */
-.dark-theme .legend-square[data-level="0"] { background-color: #1a2538; } /* Faded dark blue */
-.dark-theme .legend-square[data-level="1"] { background-color: #233b5e; } /* Slightly brighter */
-.dark-theme .legend-square[data-level="2"] { background-color: #28558c; } /* Medium blue */
-.dark-theme .legend-square[data-level="3"] { background-color: #2f74cc; } /* Bright blue */
-.dark-theme .legend-square[data-level="4"] { background-color: #358eff; } /* Most vibrant blue */
-
+.dark-theme .legend-square[data-level="0"] { background-color: #1d1d1d; }
+.dark-theme .legend-square[data-level="1"] { background-color: #0e4429; }
+.dark-theme .legend-square[data-level="2"] { background-color: #006d32; }
+.dark-theme .legend-square[data-level="3"] { background-color: #26a641; }
+.dark-theme .legend-square[data-level="4"] { background-color: #39d353; }
 
 /* Achievements */
 .tracker-achievements {
@@ -1134,7 +1128,17 @@
   background-color: var(--primary-light);
 }
 
-/* Media Queries for Responsiveness */
+/* Enhanced Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .overview-grid, .plan-grid {
+    gap: 20px;
+  }
+  
+  .resources-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 992px) {
   .tracker-header {
     flex-direction: column;
@@ -1149,31 +1153,11 @@
   .stat-box {
     min-width: 120px;
   }
-}
-
-@media (max-width: 768px) {
-  .calendar-day {
-    width: 10px;
-    height: 10px;
+  
+  .overview-grid {
+    grid-template-columns: 1fr;
   }
   
-  .tracker-actions {
-    flex-direction: column;
+  .stats-card, .action-card {
+    grid-column: span 1;
   }
-}
-
-@media (max-width: 576px) {
-  .calendar-months {
-    font-size: 0.7rem;
-  }
-  
-  .calendar-day {
-    width: 8px;
-    height: 8px;
-  }
-  
-  .legend-square {
-    width: 8px;
-    height: 8px;
-  }
-}
